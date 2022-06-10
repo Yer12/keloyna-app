@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 
 Vue.config.productionTip = false
-
+Vue.prototype.$scrollToTop = () => window.scrollTo(0,0)
 new Vue({
   router,
   store,
