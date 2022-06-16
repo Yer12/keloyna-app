@@ -159,6 +159,7 @@ export default new Vuex.Store({
           })
           .then((response) => {
             commit("CREATE_PLAYGROUND", response.data);
+            router.push("/");
           });
     },
   },

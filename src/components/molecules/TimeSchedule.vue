@@ -105,7 +105,7 @@ export default {
     },
       checkIsBronned(hour, day) {
       const time = hour + '';
-      const date = `${day}:5`
+      const date = `${day}:6`
       return (this.savedBronPlaygrounds || []).some((savedBron) => savedBron.time === time && savedBron.date === date)
     },
     deleteEvent(time, day) {
@@ -116,7 +116,7 @@ export default {
       }
     },
     hasContain(time, day) {
-      const date = `${day}:5`
+      const date = `${day}:6`
       return (this.checkedTimes || []).some((savedBron) =>  savedBron.time === time && savedBron.date === date)
     },
     checkedClass(event) {
@@ -132,12 +132,12 @@ export default {
         document.getElementById(time+'time'+day).style.borderRadius = "0";
         document.getElementById(time+'time'+day).style.color = "#FFFFFF";
         console.log(el.time, time)
-        console.log(el.date, day+":5")
-        return time === el.time && day + ':5' === el.date
+        console.log(el.date, day+":6")
+        return time === el.time && day + ':6' === el.date
       })) : (
           [...this.checkedTimes, {
             // date: day+":"+ parseInt(this.monthArr.indexOf(this.month)+1),
-            date: day+":5",
+            date: day+":6",
             time: time
           }]
       )
